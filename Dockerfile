@@ -21,6 +21,7 @@ COPY --chown=${USER} ./run.py run.py
 COPY --chown=${USER} app app
 COPY --chown=${USER} ./files_input files_input
 COPY --chown=${USER} ./files_output files_output
+COPY --chown=${USER} ./templates templates
 
 USER ${USER}
 
