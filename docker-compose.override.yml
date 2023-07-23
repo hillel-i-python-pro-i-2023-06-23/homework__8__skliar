@@ -7,3 +7,8 @@ services:
       - ./files_input:/wd/files_input:ro
       - ./files_output:/wd/files_output:rw
     working_dir: /wd
+    ports:
+      - "5000:4000"
+    command:
+      - --host=0.0.0.0
+      - --port=4000

@@ -1,4 +1,6 @@
 def get_file_content(file_path):
+    users = []
     with open(file_path) as file:
         content = file.read()
-    return content
+    users = content.split("\n")
+    return users
