@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DZ_8</title>
+</head>
+<body>
+
+    <div id="output">
+        {% if output is mapping %}
+            {% for key, value in output.items() %}
+                <p><strong>{{ key }}:</strong> {{ value }}</p>
+            {% endfor %}
+        {% elif output is string %}
+            <p>{{ output }}</p>
+        {% elif output is iterable %}
+            <ul>
+                {% for item in output %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Invalid output type</p>
+        {% endif %}
+    </div>
+
+
+    <a href="/">
+        <button>Домой</button>
+    </a>
+    <a href="/get-content/">
+        <button>К чтению файла</button>
+    </a>
+    <a href="/generate-users/">
+        <button>К генерации</button>
+    </a>
+    <a href="/space/">
+        <button>Количество космонавтов</button>
+    </a>
+    <a href="/mean/">
+        <button>Среднее</button>
+    </a>
+</body>
+</html>

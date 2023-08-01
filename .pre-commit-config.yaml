@@ -7,10 +7,10 @@ repos:
     -   id: check-merge-conflict
     -   id: debug-statements
     -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 22.10.0
-    hooks:
-    -   id: black
+#-   repo: https://github.com/psf/black
+#    rev: 22.10.0
+#    hooks:
+#    -   id: black
 
 - repo: local
 
@@ -29,7 +29,7 @@ repos:
       language: system
       types: [python]
       args: [--line-length=120, --target-version=py37]
-      exclude: ^venv/|app/services/midle.py|app/main.py
+      exclude: ^venv/
 
 
 
